@@ -1,0 +1,103 @@
+/**
+* Project : simply-countdown
+* File : simplyCountdown.theme.losange
+* Author : Vincent Loy <vincent.loy1@gmail.com>
+*/
+
+.simply-countdown-losange {
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  font-family: "marienda";
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.simply-countdown-losange > .simply-section {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-45deg);
+  background: var(--pink);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  margin: auto;
+  padding: 0px;
+}
+
+.simply-countdown-losange > .simply-section > div {
+  transform: rotate(45deg);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.simply-countdown-losange > .simply-section .simply-amount,
+.simply-countdown-losange > .simply-section .simply-word {
+  display: inline-block;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 90%;
+  }
+  .simply-countdown-losange > .simply-section {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+  .simply-countdown-losange > .simply-section {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    background: var(--pink);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    margin: auto;
+    padding: 0px;
+  }
+  .mynav .nav-link {
+    font-size: 2rem;
+  }
+  .offcanvas-cstm {
+    width: 50% !important;
+  }
+  .mynav {
+    padding: 11px;
+  }
+}
+
+@media (max-width: 445px) {
+  html {
+    font-size: 55%;
+  }
+  .simply-countdown-losange > .simply-section {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-45deg);
+    background: var(--pink);
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    margin: auto;
+    padding: 0px;
+  }
+  .mynav {
+    padding: 30px;
+  }
+}
