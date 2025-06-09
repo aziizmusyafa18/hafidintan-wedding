@@ -17,9 +17,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/wedding1.jpg);
+  background-image: url(img/wedding3.jpg);
   z-index: -1;
-  filter: sepia();
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -49,9 +48,12 @@ body {
 }
 
 .hero a {
-  color: var(--pink);
+  padding: 10px;
+  font-size: 14px;
+  width: auto;
   background-color: white;
-  font-size: 0.9rem;
+  border-radius: 40px;
+  color: var(--pink);
 }
 .hero a:hover {
   color: white;
@@ -98,7 +100,7 @@ body {
   font-family: "lavishly yours";
 }
 .couple {
-  background-image: url(img/background1.jpg);
+  background-image: url(img/background3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -110,14 +112,14 @@ body {
 }
 .couple h2 {
   font-family: "lavishly yours";
-  font-size: 4.2rem;
+  font-size: 3rem;
 }
 .couple h5 {
   font-weight: bold;
 }
 
 .info {
-  background-image: url(img/background1.jpg);
+  background-image: url(img/background2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -127,16 +129,21 @@ body {
   padding-top: 16rem;
 }
 .info a {
-  color: white;
+  padding: 10px;
+  font-size: 15px;
+  width: auto;
   background-color: var(--pink);
-  font-size: 0.9rem;
+  border-radius: 40px;
+  color: white;
 }
 .info a:hover {
   color: var(--pink);
   background-color: white;
   transition: 0.3s;
 }
-.info h2 {
+.info h2,
+.rsvp h2,
+.gift h2 {
   font-family: "lavishly yours";
   font-size: 5rem;
 }
@@ -158,4 +165,41 @@ body {
 }
 .info .card-footer {
   border-top: 1px solid #999;
+}
+
+.rsvp {
+  background-image: url(img/background3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 16rem;
+  padding-bottom: 10rem;
+}
+.rsvp button {
+  padding: 8px 24px !important;
+  font-size: 16px !important;
+  width: auto !important;
+  display: inline-block !important;
+  background-color: var(--pink) !important;
+}
+.rsvp form {
+  padding: 8px 24px !important;
+  font-size: 16px !important;
+  width: auto !important;
+  display: inline-block !important;
+}
+
+.gift {
+  text-align: center;
+  background-image: url(img/background3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 16rem;
 }
