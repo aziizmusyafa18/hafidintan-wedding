@@ -1,7 +1,7 @@
 :root {
   --pink: #f14e95;
   --bg: #0a0a0a;
-  --shadow: 0 2px 2px rgb(0 0 0 / 0.9);
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.635);
 }
 
 body {
@@ -36,8 +36,9 @@ body {
 }
 
 .hero h1 {
-  font-family: "lavishly yours";
-  font-size: 5rem;
+  font-family: "Qwigley";
+  font-size: 7rem;
+  text-shadow: var(--shadow);
 }
 
 .hero h4 {
@@ -49,8 +50,8 @@ body {
 }
 
 .hero a {
-  padding: 10px;
-  font-size: 14px;
+  padding: 9px;
+  font-size: 10px;
   width: auto;
   background-color: white;
   border-radius: 40px;
@@ -98,10 +99,10 @@ body {
 }
 .home .container h2 {
   font-size: 4.2rem;
-  font-family: "lavishly yours";
+  font-family: "dancing script";
 }
 .couple {
-  background-image: url(img/background3.jpg);
+  background-image: url(img/background1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -110,10 +111,24 @@ body {
   margin-top: -5rem;
   padding-top: 9rem;
   margin-bottom: 5rem;
+  padding-bottom: 10rem;
+}
+.couple a {
+  padding: 5px;
+  font-size: 10px;
+  width: auto;
+  background-color: var(--pink);
+  border-radius: 40px;
+  color: white;
+  margin-top: -1rem;
+}
+.couple p {
+  font-size: 1.1rem;
 }
 .couple h2 {
-  font-family: "lavishly yours";
+  font-family: "dancing script";
   font-size: 3rem;
+  font-weight: 500;
 }
 .couple h5 {
   font-weight: bold;
@@ -132,19 +147,20 @@ body {
 }
 .info a {
   padding: 10px;
-  font-size: 15px;
+  font-size: 14px;
   width: auto;
   background-color: var(--pink);
-  border-radius: 40px;
+  border-radius: 30px;
   color: white;
 }
-.info a:hover {
+.info a:hover,
+.couple a:hover {
   color: var(--pink);
   background-color: white;
   transition: 0.3s;
+  border: 1px solid var(--pink);
 }
 .info h2,
-.rsvp h2,
 .gift h2 {
   font-family: "lavishly yours";
   font-size: 5rem;
@@ -153,8 +169,9 @@ body {
   font-size: 1.1rem;
 }
 .info .card {
-  color: black !important;
+  color: white !important;
   box-shadow: var(--shadow) !important;
+  background-color: var(--pink);
 }
 .info .card-header {
   text-transform: uppercase;
@@ -165,22 +182,28 @@ body {
 }
 
 .rsvp {
-  background-image: url(img/background3.jpg);
+  background-image: url(img/background2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   min-height: 100vh;
   margin-top: -5rem;
-  padding-top: 16rem;
+  padding-top: 10rem;
   padding-bottom: 10rem;
+}
+.rsvp h2 {
+  font-family: "dancing script";
+  font-size: 4rem;
 }
 .rsvp button {
   padding: 8px 24px !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   width: auto !important;
   display: inline-block !important;
   background-color: var(--pink) !important;
+  box-shadow: var(--shadow) !important;
+  border-radius: 30px !important;
 }
 .rsvp form {
   padding: 8px 24px !important;
@@ -191,7 +214,7 @@ body {
 
 .gift {
   text-align: center;
-  background-image: url(img/background3.jpg);
+  background-image: url(img/background2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -200,14 +223,62 @@ body {
   margin-top: -5rem;
   padding-top: 16rem;
 }
+.gift li {
+  box-shadow: var(--shadow);
+}
 .gift .mygrup,
 .info .myinfo {
   padding: 5rem;
   font-size: medium;
 }
-
+.title {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+.number {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--pink);
+  text-align: center;
+}
+.button-copy {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-copy:hover,
+.rsvp button:hover {
+  color: var(--pink);
+  background-color: white;
+  border: 1px solid var(--pink);
+}
+.copy-button:active {
+  transform: scale(0.95);
+}
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
 footer {
-  padding: 3rem;
+  padding: 2rem;
   background-color: var(--pink);
   color: white;
 }
@@ -215,4 +286,36 @@ footer a {
   color: white;
   font-weight: bold;
   text-decoration: none;
+}
+footer li {
+  list-style: none;
+  margin: 1.5rem;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  form {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }

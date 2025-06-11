@@ -92,7 +92,6 @@
     background: var(--pink);
     border-radius: 0.5rem;
     transition: all 0.2s ease-in-out;
-    margin: -9px;
     padding: 0px;
   }
   .mynav {
@@ -113,8 +112,9 @@
     background: var(--pink);
     border-radius: 0.5rem;
     transition: all 0.2s ease-in-out;
-    margin: px;
     padding: 0px;
+    margin: -5px;
+    margin-bottom: 1rem;
   }
   .mynav {
     padding: 11px;
