@@ -7,10 +7,9 @@
 body {
   font-size: 1.2rem;
   font-family: "merienda";
-  min-height: 2500px;
 }
 
-.hero::before {
+/* .hero::before {
   content: "";
   position: absolute;
   top: 0;
@@ -23,16 +22,17 @@ body {
   background-size: cover;
   background-position: center;
   margin-bottom: 5rem;
-}
+}*/
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  /*background-image: url(img/wedding1.jpg);
+  background-image: url(img/wedding3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  position: relative; */
+  position: relative;
+  padding-bottom: 10rem;
 }
 
 .hero h1 {
@@ -61,6 +61,10 @@ body {
   color: white;
   background-color: var(--pink);
   transition: 0.3s;
+}
+.navbar-nav a {
+  margin: 6px;
+  margin-left: 30px;
 }
 .mynav {
   background-color: rgba(255, 255, 255, 0.5) !important;
@@ -93,8 +97,8 @@ body {
   background-position: center;
   position: relative;
   min-height: 100vh;
-  margin-top: -6rem;
-  padding-top: 15rem;
+  margin-top: -6.6rem;
+  padding-top: 70px;
   margin-bottom: 5rem;
 }
 .home .container h2 {
@@ -115,7 +119,7 @@ body {
 }
 .couple a {
   padding: 5px;
-  font-size: 10px;
+  font-size: 12px;
   width: auto;
   background-color: var(--pink);
   border-radius: 40px;
@@ -221,7 +225,7 @@ body {
   position: relative;
   min-height: 100vh;
   margin-top: -5rem;
-  padding-top: 16rem;
+  padding-top: 10rem;
 }
 .gift li {
   box-shadow: var(--shadow);

@@ -93,6 +93,7 @@
     border-radius: 0.5rem;
     transition: all 0.2s ease-in-out;
     padding: 0px;
+    margin: 0px;
   }
   .mynav {
     padding: 11px;
