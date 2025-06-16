@@ -25,6 +25,8 @@ body {
 }*/
 .hero {
   min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   background-image: url(img/wedding3.jpg);
@@ -62,6 +64,7 @@ body {
   background-color: var(--pink);
   transition: 0.3s;
 }
+
 .navbar-nav a {
   margin: 6px;
   margin-left: 30px;
@@ -98,13 +101,14 @@ body {
   position: relative;
   min-height: 100vh;
   margin-top: -6.6rem;
-  padding-top: 70px;
+  padding-top: 15rem;
   margin-bottom: 5rem;
 }
 .home .container h2 {
   font-size: 4.2rem;
   font-family: "dancing script";
 }
+
 .couple {
   background-image: url(img/background1.jpg);
   background-repeat: no-repeat;
@@ -146,7 +150,7 @@ body {
   position: relative;
   min-height: 100vh;
   margin-top: -5rem;
-  padding-top: 16rem;
+  padding-top: 10rem;
   padding-bottom: 16rem;
 }
 .info a {
@@ -171,18 +175,6 @@ body {
 }
 .info .alamat {
   font-size: 1.1rem;
-}
-.info .card {
-  color: white !important;
-  box-shadow: var(--shadow) !important;
-  background-color: var(--pink);
-}
-.info .card-header {
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-}
-.info .card-body {
-  font-size: 1rem;
 }
 
 .rsvp {
@@ -227,15 +219,23 @@ body {
   margin-top: -5rem;
   padding-top: 10rem;
 }
-.gift li {
-  box-shadow: var(--shadow);
-}
-.gift .mygrup,
+.gift .title,
 .info .myinfo {
-  padding: 5rem;
+  padding: 3rem;
   font-size: medium;
 }
-.title {
+.info .myinfo {
+  padding: 1rem 5rem;
+}
+.info .myinfo p {
+  font-family: "dancing script";
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--pink);
+  text-shadow: var(--shadow);
+}
+.title,
+.info .myinfo {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1px;
   border-radius: 8px;
@@ -291,9 +291,9 @@ footer a {
   font-weight: bold;
   text-decoration: none;
 }
-footer li {
+footer i {
   list-style: none;
-  margin: 1.5rem;
+  margin: 5px;
 }
 
 .audio-icon-wrapper {
