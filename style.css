@@ -3,7 +3,11 @@
   --bg: #0a0a0a;
   --shadow: 0 2px 2px rgba(0, 0, 0, 0.635);
 }
-
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
 body {
   font-size: 1.2rem;
   font-family: "merienda";
@@ -71,6 +75,10 @@ body {
 }
 .mynav {
   background-color: rgba(255, 255, 255, 0.5) !important;
+  z-index: 1110 !important;
+  width: 100% !important;
+  position: relative !important;
+  display: block !important;
 }
 .mynav .navbar-brand,
 .mynav .offcanvas-title {
@@ -100,13 +108,34 @@ body {
   background-position: center;
   position: relative;
   min-height: 100vh;
-  margin-top: -6.6rem;
+  width: 100vw;
   padding-top: 15rem;
   margin-bottom: 5rem;
 }
 .home .container h2 {
   font-size: 4.2rem;
   font-family: "dancing script";
+}
+.fade-in-on-scroll,
+.show-up-on-scroll {
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.4, 2, 0.6, 1),
+    transform 3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+.fade-in-on-scroll {
+  transform: none;
+}
+.show-up-on-scroll {
+  transform: translateY(30px);
+}
+
+.fade-in-on-scroll.active {
+  opacity: 1;
+}
+.show-up-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .couple {
@@ -140,6 +169,48 @@ body {
 }
 .couple h5 {
   font-weight: bold;
+}
+.slide-right,
+.slide-left,
+.fade-in {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+.slide-right {
+  transform: translateX(60px);
+  animation-name: slideInRight;
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  transform: translateX(-60px);
+  animation-name: slideInLeft;
+}
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .info {
@@ -313,6 +384,7 @@ footer i {
   justify-content: center;
   align-items: center;
   line-height: 0;
+  z-index: 1100;
 }
 
 @keyframes rotating {
@@ -322,4 +394,96 @@ footer i {
   to {
     transform: rotate(1turn);
   }
+}
+
+/* animated text */
+/* Animasi Fade In */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: none;
+  transition: opacity 0.8s, transform 0.8s;
+}
+.fade-in-on-scroll.active {
+  opacity: 1;
+}
+
+/* Slide dari kanan */
+.slide-right-on-scroll {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 2s, transform 2s;
+}
+.slide-right-on-scroll.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide dari kiri */
+.slide-left-on-scroll {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 2s, transform 2s;
+}
+.slide-left-on-scroll.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom In */
+.zoom-in-on-scroll {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.zoom-in-on-scroll.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Bounce */
+.bounce-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.bounce-on-scroll.active {
+  opacity: 1;
+  animation: bounceIn 0.8s;
+  transform: translateY(0);
+}
+@keyframes bounceIn {
+  0% {
+    transform: translateY(40px);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Card Fade */
+.card-fade-on-scroll {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.card-fade-on-scroll.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Show Up (dari bawah) */
+.show-up-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.show-up-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
 }
